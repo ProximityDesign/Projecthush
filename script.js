@@ -107,6 +107,25 @@ if (themeToggle) {
   });
 }
 
+// --- FAQ ACCORDION ---
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  const trigger = item.querySelector('.faq-trigger');
+  trigger.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
+    
+    // Close other items
+    faqItems.forEach(i => i.classList.remove('active'));
+    
+    if (!isActive) {
+      item.classList.add('active');
+    }
+    
+    // Refresh ScrollTrigger as height changed
+    setTimeout(() => { ScrollTrigger.refresh(); }, 400);
+  });
+});
+
 // --- GSAP ANIMATIONS ---
 
 // Nav background on scroll
@@ -191,4 +210,12 @@ gsap.to(".glass-phone", {
   rotationX: 10,
   rotationY: -5,
   ease: "none"
+});
+
+// Refresh ScrollTrigger when internal phone content is scrolled
+const phoneContents = document.querySelectorAll('.phone-content');
+phoneContents.forEach(content => {
+  content.addEventListener('scroll', () => {
+    ScrollTrigger.refresh();
+  });
 });
