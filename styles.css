@@ -1116,7 +1116,6 @@ html.light-mode .ai-hush-msg { background: #18181B; color: #FAFAFA; }
   width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
   background: var(--success-bg); color: var(--success); font-size: 0.75rem; font-weight: bold;
 }
-.report-preview { }
 .report-card-content { padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
 .report-card-header {
   display: flex; justify-content: space-between; align-items: center;
