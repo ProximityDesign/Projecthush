@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hush — Stop overthinking. Start deciding.</title>
+<link rel="icon" href="Assets/Logo.svg" type="image/svg+xml">
+<link rel="shortcut icon" href="Assets/Logo.svg" type="image/svg+xml">
+
+<!-- Fonts: Instrument Serif for elegant italics, Inter for clean modern UI -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles.css">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Ambient Background -->
+  <div class="ambient-bg">
+    <div class="bg-grid"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#" class="logo magnetic">
+        <img src="Assets/Logo.svg" alt="Hush Logo" class="logo-icon">
+        <span>Hush.</span>
+      </a>
+      <div class="nav-links">
+        <a href="#old-way" class="magnetic-link">The Problem</a>
+        <a href="#how" class="magnetic-link">How it Works</a>
+        <a href="#features" class="magnetic-link">Capabilities</a>
+      </div>
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+        <button id="theme-toggle" class="theme-toggle magnetic" aria-label="Toggle theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="#download" class="nav-btn magnetic">
+          <span>Get the App</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Section 1: The Hero (Aurient Style) -->
+    <section class="hero">
+      
+      <!-- Background Image -->
+      <div class="hero-bg">
+        <img src="Assets/young-handsome-business-man-using-laptop-cafe.jpg" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <h1 class="hero-title fade-in-up">
+            Stop overthinking.<br>
+            <em class="serif-italic">Start deciding.</em>
+          </h1>
+          <p class="hero-subtitle fade-in-up delay-1">
+            Hush is an AI app that interviews you about your hard decisions. It asks you 4 to 6 personalized questions to help you cut through the noise and figure out what you actually want to do.
+          </p>
+          <div class="hero-cta fade-in-up delay-2">
+            <a href="#download" class="btn-pill">
+              <span>Start your session</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Stats (Like Aurient reference) -->
+        <div class="hero-bottom-stats fade-in-up delay-3">
+          <div class="stat-item">
+            <h4 class="stat-value">5 mins</h4>
+            <p class="stat-label">Average session time</p>
+          </div>
+          <div class="stat-item">
+            <h4 class="stat-value">4-6</h4>
+            <p class="stat-label">Personalized questions</p>
+          </div>
+          <div class="stat-item">
+            <h4 class="stat-value">100%</h4>
+            <p class="stat-label">Clarity on your decision</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 2: The "Old Way" -->
+    <section class="problem" id="old-way">
+      <div class="container">
+        <div class="problem-grid">
+          <div class="problem-text scroll-reveal">
+            <h2 class="section-title">
+              You don't lack information.<br>
+              <em class="serif-italic">You lack clarity.</em>
+            </h2>
+            <p class="section-desc">
+              When facing a hard choice, the anxiety and opinions in your head drown out what you actually know. The current tools don't help:
+            </p>
+          </div>
+          
+          <div class="old-way-wrapper scroll-reveal">
+            <div class="old-way-list">
+              <div class="old-way-item magic-card">
+                <div class="magic-glow"></div>
+                <div class="magic-content">
+                  <h4 class="old-way-header"><span class="cross-icon">✕</span> Pro/Con Lists</h4>
+                  <p class="old-way-desc">Treat decisions like math problems and ignore your emotions.</p>
+                </div>
+              </div>
+              <div class="old-way-item magic-card">
+                <div class="magic-glow"></div>
+                <div class="magic-content">
+                  <h4 class="old-way-header"><span class="cross-icon">✕</span> Journaling</h4>
+                  <p class="old-way-desc">Takes too much effort when your brain is already exhausted.</p>
+                </div>
+              </div>
+              <div class="old-way-item magic-card">
+                <div class="magic-glow"></div>
+                <div class="magic-content">
+                  <h4 class="old-way-header"><span class="cross-icon">✕</span> Asking friends</h4>
+                  <p class="old-way-desc">Just gives you <em>their</em> anxieties disguised as advice.</p>
+                </div>
+              </div>
+            </div>
+            <div class="old-way-footer">
+              <p>You end up stuck, looping over the same thoughts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: The "New Way" -->
+    <section class="method" id="how">
+      <div class="container">
+        <div class="text-center mb-20">
+          <h2 class="section-title scroll-reveal">
+            How to get unstuck in <em class="serif-italic">5 minutes.</em>
+          </h2>
+          <p class="section-desc scroll-reveal">
+            Hush doesn't give you advice. It gives you a structured interview to uncover your own answer.
+          </p>
+        </div>
+
+        <div class="timeline-container scroll-reveal">
+          <div class="timeline-line"></div>
+          
+          <div class="timeline-step magic-card">
+            <div class="magic-glow"></div>
+            <div class="magic-content step-content">
+              <div class="step-num">Step 1</div>
+              <div class="mini-ui">
+                <div class="mini-ui-mic">🎙️</div>
+                <div class="mini-ui-text">"I don't know if I should quit..."</div>
+              </div>
+              <h3 class="step-title">Dump your unstructured thoughts.</h3>
+              <p class="step-desc">Hit the microphone and talk through your problem out loud, or type it out. Just drop what's on your mind—no categories or forms required.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-step magic-card">
+            <div class="magic-glow"></div>
+            <div class="magic-content step-content">
+              <div class="step-num">Step 2</div>
+              <div class="mini-ui">
+                <div class="mini-ui-bubble ai">What's the real fear here?</div>
+              </div>
+              <h3 class="step-title">Answer the AI’s questions.</h3>
+              <p class="step-desc">Hush analyzes your input and asks 4 to 6 deeply personalized questions, one at a time, designed to surface the real priority hiding behind your stated one.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-step magic-card">
+            <div class="magic-glow"></div>
+            <div class="magic-content step-content">
+              <div class="step-num">Step 3</div>
+              <div class="mini-ui">
+                <div class="mini-ui-report">
+                  <div class="report-line"></div>
+                  <div class="report-line"></div>
+                  <div class="report-line short"></div>
+                </div>
+              </div>
+              <h3 class="step-title">Read your Decision Report.</h3>
+              <p class="step-desc">Once you've found your answer, Hush generates a structured summary showing what you gain, what you give up, and 2-3 honest red flags to keep in mind.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Core Capabilities -->
+    <section class="capabilities" id="features">
+      <div class="container">
+        <div class="text-center mb-20 scroll-reveal">
+          <h2 class="section-title center">
+            Everything you need to<br>
+            <em class="serif-italic">clarify your thinking.</em>
+          </h2>
+        </div>
+        
+        <div class="capabilities-grid scroll-reveal">
+          <!-- Card 1: Voice & Text -->
+          <div class="cap-card magic-card scroll-reveal">
+            <div class="magic-glow"></div>
+            <div class="magic-content">
+              <div class="cap-icon voice-anim">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="mic-svg"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+                <div class="waveform">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </div>
+              <h3 class="cap-title">Voice & Text Modes</h3>
+              <p class="cap-desc">
+                <strong>Talk it out or write it down.</strong>
+                Speak your messy thoughts and have the AI respond with calm, unhurried audio, or type it out like a traditional journal.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Decision Journal -->
+          <div class="cap-card magic-card scroll-reveal">
+            <div class="magic-glow"></div>
+            <div class="magic-content">
+              <div class="cap-icon journal-anim">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="journal-svg"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <div class="sparkle"></div>
+              </div>
+              <h3 class="cap-title">The Decision Journal</h3>
+              <p class="cap-desc">
+                <strong>Never forget your 'Why'.</strong>
+                Every session is saved as a structured entry. Later, you can ask your journal why you made a specific choice months ago.
+              </p>
+              <div class="cap-card-cta">
+                <a href="#download" class="btn-primary btn-small magnetic">
+                  <span>Start your journal</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Pattern Recognition -->
+          <div class="cap-card magic-card scroll-reveal">
+            <div class="magic-glow"></div>
+            <div class="magic-content">
+              <div class="cap-icon pattern-anim">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="pattern-svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                <div class="node n1"></div>
+                <div class="node n2"></div>
+              </div>
+              <h3 class="cap-title">Pattern Recognition</h3>
+              <p class="cap-desc">
+                <strong>See the habits you're blind to.</strong>
+                Hush highlights recurring fears and values across your sessions, showing you what truly drives your choices over time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Wisdom Lenses -->
+          <div class="cap-card magic-card scroll-reveal">
+            <div class="magic-glow"></div>
+            <div class="magic-content">
+              <div class="cap-icon wisdom-anim">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="wisdom-svg"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <div class="scanner"></div>
+              </div>
+              <h3 class="cap-title">Wisdom Lenses</h3>
+              <p class="cap-desc">
+                <strong>Apply historical frameworks.</strong>
+                Switch to specific philosophical lenses like Stoicism or First Principles to see your decision from a new perspective.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Category Boundaries -->
+    <section class="boundaries">
+      <div class="container">
+        <div class="boundaries-layout scroll-reveal">
+          <div class="boundaries-text">
+            <h2 class="section-title">
+              Hush doesn't make<br>
+              <em class="serif-italic">decisions for you.</em>
+            </h2>
+            <p class="section-desc">
+              We built a thinking partner, not a digital dictator. Hush just asks you questions until you tell <em>yourself</em> what to do.
+            </p>
+          </div>
+          <div class="boundaries-list-wrap">
+            <ul class="boundaries-list magic-card">
+              <div class="magic-glow"></div>
+              <div class="magic-content">
+                <li>
+                  <span class="cross-icon">✕</span>
+                  <div class="b-text"><strong>Not a therapy app:</strong> We don't diagnose.</div>
+                </li>
+                <li>
+                  <span class="cross-icon">✕</span>
+                  <div class="b-text"><strong>Not a productivity tool:</strong> We don't manage tasks.</div>
+                </li>
+                <li>
+                  <span class="cross-icon">✕</span>
+                  <div class="b-text"><strong>No recommendations:</strong> We don't give you a score or tell you what to do.</div>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Bottom CTA -->
+    <section class="cta" id="download">
+      <div class="container scroll-reveal">
+        <div class="cta-box">
+          <div class="cta-bg">
+            <img src="Assets/man-wearing-denim-shirt-using-smartphone-white.jpg" alt="Get the app" class="cta-bg-img">
+            <div class="cta-overlay"></div>
+          </div>
+          
+          <div class="cta-content">
+            <h2 class="cta-title">
+              Get clarity on the decision<br>
+              <em class="serif-italic">you've been putting off.</em>
+            </h2>
+            <p class="cta-desc">
+              Drop your thoughts into Hush right now. You’ll have your answer in minutes.
+            </p>
+            <div class="cta-actions">
+              <a href="#" class="btn-primary magnetic cta-high-contrast">
+                <iconify-icon icon="ant-design:apple-filled" style="font-size: 20px; margin-right: 10px;"></iconify-icon>
+                <span>Download on iOS</span>
+              </a>
+              <a href="#" class="btn-primary magnetic cta-high-contrast">
+                <iconify-icon icon="ant-design:android-filled" style="font-size: 20px; margin-right: 10px;"></iconify-icon>
+                <span>Download on Android</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-logo">Hush.</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-copy">© 2026 Hush Intelligence.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
