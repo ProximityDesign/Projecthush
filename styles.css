@@ -1153,7 +1153,7 @@ html.light-mode .ai-hush-msg { background: #18181B; color: #FAFAFA; }
 
 .phone-frame {
   width: 320px;
-  height: 640px;
+  height: 740px;
   background: var(--bg-card);
   border: 12px solid #1a1a1a;
   border-radius: 48px;
@@ -1624,25 +1624,29 @@ html.light-mode .testi-avatar { background: #F4F4F5; }
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
+.faq-item {
+  border-radius: 16px !important; /* Sharper edges */
+  overflow: hidden;
+}
 .faq-item .magic-content {
-  padding: 0;
+  padding: 1rem; /* Removing extra wrapper padding */
 }
 
 .faq-trigger {
   width: 100%;
   background: none;
   border: none;
-  padding: 2rem 2.5rem;
+  padding: 0.85rem 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   text-align: left;
   color: var(--text-main);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -1666,10 +1670,10 @@ html.light-mode .testi-avatar { background: #F4F4F5; }
 }
 
 .faq-answer p {
-  padding: 0 2.5rem 2rem 2.5rem;
-  font-size: 0.95rem;
+  padding: 0.5rem 1.25rem 0.85rem 1.25rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .faq-item.active .faq-answer {
@@ -1728,7 +1732,28 @@ html.light-mode .testi-avatar { background: #F4F4F5; }
   .cta-actions .cta-app-btn { width: 100%; justify-content: center; }
   
   /* Footer */
-  .footer-container { flex-direction: column; gap: 2rem; text-align: center; }
+  .footer-container { 
+    display: flex;
+    flex-direction: column; 
+    gap: 2.5rem; 
+    text-align: center; 
+  }
+  .footer-links {
+    order: 1;
+    gap: 2rem;
+  }
+  .footer-logo {
+    order: 2;
+  }
+  .footer-copy {
+    order: 3;
+    text-align: center;
+  }
+  .footer-bottom {
+    margin-top: 2rem;
+  }
+
+  .footer-bottom a { color: #a855f7; border-color: #a855f7; }
 
   /* Animation Overrides */
   .mini-ui { height: 120px; padding: 1.5rem; gap: 1.25rem; border-radius: 20px; }
@@ -1751,13 +1776,13 @@ html.light-mode .testi-avatar { background: #F4F4F5; }
 
   /* Session Demo Mobile */
   .dual-phone-display { flex-direction: column; gap: 2rem; }
-  .phone-frame { width: 100%; max-width: 340px; height: 580px; }
+  .phone-frame { width: 100%; max-width: 340px; height: 700px; }
   .display-connector { transform: rotate(90deg); padding: 1rem 0; }
   .r-mini-block { padding: 0.5rem; }
 
   /* FAQ Mobile */
   .faq-grid { grid-template-columns: 1fr; }
-  .faq-item .magic-content { padding: 1.5rem; }
-  .faq-trigger { padding: 1.25rem 1.5rem; font-size: 1rem; }
-  .faq-answer p { padding: 0 1.5rem 1.25rem 1.5rem; }
+  .faq-item .magic-content { padding: 0.5rem; }
+  .faq-trigger { padding: 1rem 1.25rem; font-size: 1rem; }
+  .faq-answer p { padding: 0 1.25rem 1rem 1.25rem; }
 }
