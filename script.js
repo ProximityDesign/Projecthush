@@ -198,19 +198,19 @@ window.addEventListener('load', () => {
   ScrollTrigger.refresh();
 });
 
-// Parallax for phone in hero
-gsap.to(".glass-phone", {
-  scrollTrigger: {
-    trigger: ".hero",
-    start: "top top",
-    end: "bottom top",
-    scrub: 1
-  },
-  y: 100,
-  rotationX: 10,
-  rotationY: -5,
-  ease: "none"
-});
+// Parallax for illustration in hero (connection lines and side bubbles)
+if (document.querySelector('.connection-lines')) {
+  gsap.to([".connection-lines", ".decision-bubble"], {
+    scrollTrigger: {
+      trigger: ".hero-split",
+      start: "top top",
+      end: "bottom top",
+      scrub: 1
+    },
+    y: 80,
+    ease: "none"
+  });
+}
 
 // Refresh ScrollTrigger when internal phone content is scrolled
 const phoneContents = document.querySelectorAll('.phone-content');
@@ -219,3 +219,53 @@ phoneContents.forEach(content => {
     ScrollTrigger.refresh();
   });
 });
+
+// --- WAITLIST FORM SUBMISSION ---
+const waitlistForm = document.getElementById('waitlist-form');
+if (waitlistForm) {
+  const input = waitlistForm.querySelector('.cta-input');
+  const submitBtn = waitlistForm.querySelector('.cta-submit-btn');
+  const statusEl = waitlistForm.querySelector('.cta-form-status');
+  
+  waitlistForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const email = input.value.trim();
+    if (!email) return;
+    
+    // Reset status
+    statusEl.className = 'cta-form-status loading';
+    statusEl.textContent = 'Adding you to the waitlist...';
+    
+    // Disable inputs
+    input.disabled = true;
+    submitBtn.disabled = true;
+    
+    // Animate button scale down slightly while loading
+    gsap.to(submitBtn, { scale: 0.95, opacity: 0.7, duration: 0.2 });
+    
+    // Simulate API call
+    setTimeout(() => {
+      // Re-enable input and button
+      input.disabled = false;
+      submitBtn.disabled = false;
+      
+      // Animate button back to normal
+      gsap.to(submitBtn, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.7)" });
+      
+      // Update status to success
+      statusEl.className = 'cta-form-status success';
+      statusEl.textContent = "✓ You're on the list! We'll notify you as soon as Hush is ready.";
+      
+      // Clear input
+      input.value = '';
+      
+      // Animate success text fade-in
+      gsap.fromTo(statusEl, 
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }
+      );
+      
+    }, 1200);
+  });
+}

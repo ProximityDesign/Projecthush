@@ -47,8 +47,8 @@
           <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
           <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         </button>
-        <a href="#download" class="nav-btn magnetic">
-          <span>Get the App</span>
+        <a href="#signup" class="nav-btn magnetic">
+          <span>Join Waitlist</span>
         </a>
       </div>
     </div>
@@ -57,45 +57,182 @@
   <!-- Main Content -->
   <main>
     
-    <!-- Section 1: The Hero (Aurient Style) -->
-    <section class="hero">
-      
-      <!-- Background Image -->
-      <div class="hero-bg">
-        <img src="Assets/young-handsome-business-man-using-laptop-cafe.jpg" class="hero-bg-img">
-        <div class="hero-overlay"></div>
-      </div>
+    <!-- Section 1: The Hero (Interactive Mind-Map Style) -->
+    <section class="hero-split">
+      <div class="hero-split-container">
+               <!-- Connection lines using SVG (covers the entire hero container) -->
+        <svg class="connection-lines" viewBox="0 0 1200 730" fill="none">
+          <defs>
+            <!-- Premium Soft Color Gradients -->
+            <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#c084fc" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#a855f7" stop-opacity="0.9" />
+            </linearGradient>
+            <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.9" />
+            </linearGradient>
+            <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f472b6" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#ec4899" stop-opacity="0.9" />
+            </linearGradient>
+            <linearGradient id="grad-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.9" />
+            </linearGradient>
+            <linearGradient id="grad-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.9" />
+            </linearGradient>
+            
+            <linearGradient id="mainFlowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8" />
+              <stop offset="50%" stop-color="var(--accent)" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="var(--success)" stop-opacity="1" />
+            </linearGradient>
 
-      <div class="container hero-container">
-        
+            <!-- Radial Mask to prevent overlapping with Clarity bubble and its label -->
+            <radialGradient id="clarity-halo" cx="820" cy="610" r="110" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="black" />
+              <stop offset="55%" stop-color="black" stop-opacity="0.95" />
+              <stop offset="100%" stop-color="white" />
+            </radialGradient>
+            <mask id="clarity-mask">
+              <rect x="0" y="0" width="1200" height="730" fill="white" />
+              <!-- Smooth radial halo fade for background lines -->
+              <circle cx="820" cy="610" r="110" fill="url(#clarity-halo)" />
+            </mask>
+          </defs>
+
+          <!-- Static Dashed Paths (Cubic S-Curves) -->
+          <path class="conn-path-static" d="M 175,117 C 300,100 450,300 600,610" stroke="url(#grad-purple)" mask="url(#clarity-mask)" />
+          <path class="conn-path-static" d="M 95,237 C 250,250 400,400 600,610" stroke="url(#grad-blue)" mask="url(#clarity-mask)" />
+          <path class="conn-path-static" d="M 235,317 C 350,320 400,450 600,610" stroke="url(#grad-rose)" mask="url(#clarity-mask)" />
+          <path class="conn-path-static" d="M 115,417 C 250,450 450,500 600,610" stroke="url(#grad-gold)" mask="url(#clarity-mask)" />
+          <path class="conn-path-static" d="M 205,517 C 320,530 450,560 600,610" stroke="url(#grad-teal)" mask="url(#clarity-mask)" />
+          
+          <path class="conn-path-static" d="M 1035,127 C 900,100 750,300 600,610" stroke="url(#grad-purple)" mask="url(#clarity-mask)" />
+          <path class="conn-path-static" d="M 1135,227 C 950,250 800,400 600,610" stroke="url(#grad-blue)" mask="url(#clarity-mask)" />
+          <path class="conn-path-static" d="M 1005,327 C 850,320 800,450 600,610" stroke="url(#grad-rose)" mask="url(#clarity-mask)" />
+          <path class="conn-path-static" d="M 1115,427 C 950,450 750,500 600,610" stroke="url(#grad-gold)" mask="url(#clarity-mask)" />
+          <path class="conn-path-static" d="M 1015,527 C 880,530 750,560 600,610" stroke="url(#grad-teal)" mask="url(#clarity-mask)" />
+          
+          <path class="conn-path-static" d="M 600,650 Q 710,645 820,610" />
+
+          <!-- Animated Glowing Paths -->
+          <path class="conn-path-glow flow-delay-1" d="M 175,117 C 300,100 450,300 600,610" stroke="url(#grad-purple)" mask="url(#clarity-mask)" />
+          <path class="conn-path-glow flow-delay-2" d="M 95,237 C 250,250 400,400 600,610" stroke="url(#grad-blue)" mask="url(#clarity-mask)" />
+          <path class="conn-path-glow flow-delay-3" d="M 235,317 C 350,320 400,450 600,610" stroke="url(#grad-rose)" mask="url(#clarity-mask)" />
+          <path class="conn-path-glow flow-delay-4" d="M 115,417 C 250,450 450,500 600,610" stroke="url(#grad-gold)" mask="url(#clarity-mask)" />
+          <path class="conn-path-glow flow-delay-5" d="M 205,517 C 320,530 450,560 600,610" stroke="url(#grad-teal)" mask="url(#clarity-mask)" />
+          
+          <path class="conn-path-glow flow-delay-6" d="M 1035,127 C 900,100 750,300 600,610" stroke="url(#grad-purple)" mask="url(#clarity-mask)" />
+          <path class="conn-path-glow flow-delay-1" d="M 1135,227 C 950,250 800,400 600,610" stroke="url(#grad-blue)" mask="url(#clarity-mask)" />
+          <path class="conn-path-glow flow-delay-2" d="M 1005,327 C 850,320 800,450 600,610" stroke="url(#grad-rose)" mask="url(#clarity-mask)" />
+          <path class="conn-path-glow flow-delay-3" d="M 1115,427 C 950,450 750,500 600,610" stroke="url(#grad-gold)" mask="url(#clarity-mask)" />
+          <path class="conn-path-glow flow-delay-4" d="M 1015,527 C 880,530 750,560 600,610" stroke="url(#grad-teal)" mask="url(#clarity-mask)" />
+          
+          <!-- Flow from app to clarity bubble -->
+          <path class="conn-path-glow flow-main" d="M 600,650 Q 710,645 820,610" stroke="url(#mainFlowGrad)" />
+        </svg>
+
+        <!-- Left Side Floating Decision Bubbles -->
+        <div class="decision-bubble bubble-1"><span>Career? 🚀</span></div>
+        <div class="decision-bubble bubble-2"><span>Quit job? 💼</span></div>
+        <div class="decision-bubble bubble-3"><span>Move out? 🏠</span></div>
+        <div class="decision-bubble bubble-4"><span>Stay or Go? ⚖️</span></div>
+        <div class="decision-bubble bubble-5"><span>Fear? 😰</span></div>
+
+        <!-- Right Side Floating Decision Bubbles -->
+        <div class="decision-bubble bubble-6"><span>Salary? 💰</span></div>
+        <div class="decision-bubble bubble-7"><span>Stability? 🛡️</span></div>
+        <div class="decision-bubble bubble-8"><span>Approval? 🤝</span></div>
+        <div class="decision-bubble bubble-9"><span>Identity? 👤</span></div>
+        <div class="decision-bubble bubble-10"><span>Anxiety? 🧠</span></div>
+
+        <!-- Center Content Column (Title, Subtitle, Buttons, Rating, Stats) -->
         <div class="hero-content">
           <h1 class="hero-title fade-in-up">
-            Stop overthinking.<br>
-            <em class="serif-italic">Start deciding.</em>
+            <span class="hero-title-line">Stop overthinking.</span>
+            <span class="hero-title-line serif-italic">Start deciding.</span>
           </h1>
           <p class="hero-subtitle fade-in-up delay-1">
-            Hush is an AI app that interviews you about your hard decisions. It asks you 4 to 6 personalized questions to help you cut through the noise and figure out what you actually want to do.
+            <span class="hero-subtitle-line">Hush is an AI app that interviews you about your hard decisions. It asks you 4 to 6</span>
+            <span class="hero-subtitle-line">personalized questions to help you cut through the noise and figure out what you actually want to do.</span>
           </p>
-          <div class="hero-cta fade-in-up delay-2">
-            <a href="#download" class="btn-pill">
-              <span>Start your session</span>
+          <div class="hero-cta-group fade-in-up delay-2">
+            <a href="#signup" class="btn-pill-primary magnetic">
+              <span>Join the Waitlist</span>
             </a>
+            <a href="#how" class="btn-pill-secondary magnetic">
+              <span>See how it works</span>
+            </a>
+          </div>
+          
+          <div class="hero-rating fade-in-up delay-3">
+            <div class="stars">★★★★★</div>
+            <span class="rating-text"><strong>5.0</strong> | Clarity ratings</span>
+          </div>
+
+          <!-- Bottom Stats -->
+          <div class="hero-stats fade-in-up delay-4">
+            <div class="stat-col">
+              <span class="stat-num">5 min</span>
+              <span class="stat-desc">Avg. session time</span>
+            </div>
+            <div class="stat-col">
+              <span class="stat-num">4-6</span>
+              <span class="stat-desc">Reflective questions</span>
+            </div>
+            <div class="stat-col">
+              <span class="stat-num">100%</span>
+              <span class="stat-desc">Decision clarity</span>
+            </div>
           </div>
         </div>
 
-        <!-- Bottom Stats (Like Aurient reference) -->
-        <div class="hero-bottom-stats fade-in-up delay-3">
-          <div class="stat-item">
-            <h4 class="stat-value">5 mins</h4>
-            <p class="stat-label">Average session time</p>
+        <!-- Bottom Wired Nodes (Hush App phone mockup & Clarity Bubble) -->
+        <div class="hero-wired-nodes">
+          <!-- Hush AI App -->
+          <div class="hush-app-node">
+            <div class="phone-mini">
+              <div class="phone-mini-notch"></div>
+              <div class="phone-mini-screen">
+                <div class="mini-app-title">Hush</div>
+                <div class="mini-app-waveform">
+                  <span class="m-bar"></span>
+                  <span class="m-bar"></span>
+                  <span class="m-bar"></span>
+                  <span class="m-bar"></span>
+                  <span class="m-bar"></span>
+                </div>
+                <div class="mini-app-bubble">Let's reflect...</div>
+              </div>
+            </div>
+            <span class="node-label">Hush AI</span>
           </div>
-          <div class="stat-item">
-            <h4 class="stat-value">4-6</h4>
-            <p class="stat-label">Personalized questions</p>
-          </div>
-          <div class="stat-item">
-            <h4 class="stat-value">100%</h4>
-            <p class="stat-label">Clarity on your decision</p>
+
+          <!-- Clarity Card -->
+          <div class="clarity-bubble-wrapper">
+            <div class="clarity-card">
+              <div class="clarity-glow"></div>
+              <div class="clarity-card-header">
+                <span class="clarity-badge">
+                  <span class="badge-dot"></span>
+                  Hush Insight
+                </span>
+                <svg class="clarity-sparkle" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l2.4 7.2 7.2 2.4-7.2 2.4-2.4 7.2-2.4-7.2-7.2-2.4 7.2-2.4z"/>
+                </svg>
+              </div>
+              <div class="clarity-card-body">
+                <span class="clarity-statement">Prepare exit first</span>
+              </div>
+              <div class="clarity-card-footer">
+                <span class="clarity-score">98% Clarity Score</span>
+              </div>
+            </div>
+            <span class="node-label">Clarity</span>
           </div>
         </div>
 
@@ -329,8 +466,8 @@
                 Every session is saved as a structured entry. Later, you can ask your journal why you made a specific choice months ago.
               </p>
               <div class="cap-card-cta">
-                <a href="#download" class="btn-primary btn-small magnetic">
-                  <span>Start your journal</span>
+                <a href="#signup" class="btn-primary btn-small magnetic">
+                  <span>Get Early Access</span>
                 </a>
               </div>
             </div>
@@ -809,7 +946,7 @@
       </div>
     </section>
 
-    <section class="cta" id="download">
+    <section class="cta" id="signup">
       <div class="container scroll-reveal">
         <div class="cta-box">
           <div class="cta-image">
@@ -822,24 +959,17 @@
               <em class="serif-italic">you've been putting off.</em>
             </h2>
             <p class="cta-desc">
-              Drop your thoughts into Hush right now. You’ll have your answer in minutes.
+              Sign up for the private release. Be the first to experience decision intelligence when we launch.
             </p>
-            <div class="cta-actions">
-              <div class="cta-app-btn coming-soon magnetic" data-tooltip="Coming Soon to iOS">
-                <iconify-icon icon="ic:baseline-apple" class="app-icon"></iconify-icon>
-                <div class="app-text">
-                  <span class="app-small">Download on the</span>
-                  <span class="app-large">App Store</span>
-                </div>
+            <form class="cta-form" id="waitlist-form">
+              <div class="input-group">
+                <input type="email" placeholder="Enter your email address" required class="cta-input">
+                <button type="submit" class="cta-submit-btn magnetic">
+                  <span>Join Waitlist</span>
+                </button>
               </div>
-              <div class="cta-app-btn coming-soon magnetic" data-tooltip="Coming Soon to Android">
-                <iconify-icon icon="logos:google-play-icon" class="app-icon"></iconify-icon>
-                <div class="app-text">
-                  <span class="app-small">GET IT ON</span>
-                  <span class="app-large">Google Play</span>
-                </div>
-              </div>
-            </div>
+              <p class="cta-form-status"></p>
+            </form>
           </div>
         </div>
       </div>
