@@ -2263,9 +2263,9 @@ html.light-mode .testi-avatar { background: #F4F4F5; }
     white-space: normal;
   }
   .hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.75rem;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
     max-width: 100%;
   }
   .hero-subtitle-line {
@@ -2281,8 +2281,8 @@ html.light-mode .testi-avatar { background: #F4F4F5; }
   .btn-pill-primary, .btn-pill-secondary {
     width: 100%;
     justify-content: center;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
   .hero-rating {
     margin-bottom: 1.5rem;
